@@ -1,0 +1,118 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Clang++ active file build",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "-O0",
+                "-Wall",
+                "-Wextra",
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-g",
+                "${file}",
+                "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
+                "-o",
+                "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+                "-lm",
+                "-fopenmp"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "cppbuild",
+            "label": "Clang++ active directory build",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "-O0",
+                "-Wall",
+                "-Wextra",
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
+                "-g",
+                "*.cpp",
+                "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
+                "-o",
+                "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+                "-lm",
+                "-fopenmp"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "type": "shell",
+            "label": "CUDA active file build",
+            "command": "nvcc",
+            "args": [
+                "-g",
+                "-G",
+                "${file}",
+                "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
+                "-o",
+                "${workspaceFolder}.\\.exe\\${fileBasenameNoExtension}.exe",
+                "-arch=sm_60"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$nvcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "dependsOn": [
+                ".exe"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "CUDA active directory build",
+            "command": "$fileNames = ((ls -name) -split '\\r?\\n') | where { $_ -match '\\.(c|cpp|cu)' }; nvcc -g -G $fileNames ${workspaceFolder}\\DSTimer\\DS_timer.cpp -o ${workspaceFolder}.\\.exe\\${fileBasenameNoExtension}.exe -arch=sm_60",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$nvcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "dependsOn": [
+                ".exe",
+            ]
+        },
+        {
+            "type": "shell",
+            "label": ".exe",
+            "command": "if (!(test-path -path .exe)) { mkdir .exe }",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+    ]
+}
