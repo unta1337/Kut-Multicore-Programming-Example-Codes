@@ -5,6 +5,7 @@
 
 > 참고:  
 > #include에 사용하는 경로나 헤더 가드 등 일부 요소가 변경되었으므로 참고 바람.
+> CryptoImage 과제의 경우 외부 종속성으로 OpenCV 및 기타 런타임 라이브러리가 필요하므로 Visual Studio에서 [교수님의 파일](https://koreatechackr-my.sharepoint.com/personal/bluekds_koreatech_ac_kr/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fbluekds%5Fkoreatech%5Fac%5Fkr%2FDocuments%2F%EA%B0%95%EC%9D%98%2F%EB%A9%80%ED%8B%B0%EC%BD%94%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%2F%EC%8B%A4%EC%8A%B5%2FLab1%2D2%2Ezip&parent=%2Fpersonal%2Fbluekds%5Fkoreatech%5Fac%5Fkr%2FDocuments%2F%EA%B0%95%EC%9D%98%2F%EB%A9%80%ED%8B%B0%EC%BD%94%EC%96%B4%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%2F%EC%8B%A4%EC%8A%B5&ga=1)을 통해 실행하는 것을 권장합니다.
 
 # **# Visutal Stuio Code를 위한 개발 환경 설정**
 본 문서는 **Visual Studio** 및 **Visual Studio Code**가 이미 설치되어 있다는 가정하에 LLVM을 비롯한 기타 개발 도구를 설치하는 방법을 설명한다.  
