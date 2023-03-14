@@ -43,7 +43,7 @@
                 "-fcolor-diagnostics",
                 "-fansi-escape-codes",
                 "-g",
-                "*.cpp",
+                "${fileDirname}\\*.cpp",
                 "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
                 "-o",
                 "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
