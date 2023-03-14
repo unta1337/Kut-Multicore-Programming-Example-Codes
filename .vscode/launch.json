@@ -5,36 +5,36 @@
             "name": "LLDB: Clang++ 활성 파일 빌드",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\.exe\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "preLaunchTask": "Clang++ active file build"
         },
         {
             "name": "LLDB: Clang++ 활성 디렉토리 빌드",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\.exe\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "preLaunchTask": "Clang++ active directory build"
         },
         {
             "name": "CL/LLDB: CUDA 활성 파일 빌드",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\.exe\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "preLaunchTask": "CUDA active file build"
         },
         {
             "name": "CL/LLDB: CUDA 활성 디렉토리 빌드",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+            "program": "${fileDirname}\\.exe\\${fileBasenameNoExtension}.exe",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${fileDirname}",
             "preLaunchTask": "CUDA active directory build"
         }
     ]

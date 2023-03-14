@@ -16,7 +16,7 @@
                 "${file}",
                 "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
                 "-o",
-                "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}\\.exe\\${fileBasenameNoExtension}.exe",
                 "-lm",
                 "-fopenmp"
             ],
@@ -46,7 +46,7 @@
                 "${fileDirname}\\*.cpp",
                 "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
                 "-o",
-                "${workspaceFolder}\\.exe\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}\\.exe\\${fileBasenameNoExtension}.exe",
                 "-lm",
                 "-fopenmp"
             ],
@@ -71,7 +71,7 @@
                 "${file}",
                 "${workspaceFolder}\\DSTimer\\DS_timer.cpp",
                 "-o",
-                "${workspaceFolder}.\\.exe\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}.\\.exe\\${fileBasenameNoExtension}.exe",
                 "-arch=sm_60"
             ],
             "options": {
@@ -91,7 +91,7 @@
         {
             "type": "shell",
             "label": "CUDA active directory build",
-            "command": "$fileNames = ((ls -name) -split '\\r?\\n') | where { $_ -match '\\.(c|cpp|cu)' }; nvcc -g -G $fileNames ${workspaceFolder}\\DSTimer\\DS_timer.cpp -o ${workspaceFolder}.\\.exe\\${fileBasenameNoExtension}.exe -arch=sm_60",
+            "command": "$fileNames = ((ls -name) -split '\\r?\\n') | where { $_ -match '\\.(c|cpp|cu)' }; nvcc -g -G $fileNames ${workspaceFolder}\\DSTimer\\DS_timer.cpp -o ${fileDirname}.\\.exe\\${fileBasenameNoExtension}.exe -arch=sm_60",
             "options": {
                 "cwd": "${fileDirname}"
             },
@@ -111,7 +111,7 @@
             "label": ".exe",
             "command": "if (!(test-path -path .exe)) { mkdir .exe }",
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             }
         },
     ]
